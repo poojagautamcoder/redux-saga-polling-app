@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Navigate } from "react-router-dom";
-import LogIn from "./screens/LogIn";
+import LogIn from "./screens/login/LogIn";
 const PrivateRouting = ({ children, path, ...rest }) => {
   const auth = localStorage.getItem("token") ? true : false
   return (
