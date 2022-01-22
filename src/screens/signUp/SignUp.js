@@ -1,11 +1,34 @@
-import React from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SignupRequest } from "../../redux/action/index";
 import SignUpNav from "../../components/Navbar";
 const SignUp = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
+  const state = useSelector((state) => {
+    return state.data;
+  });
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let loginData = {
+      username: username,
+      password: password,
+      role: role,
+    };
+    dispatch(SignupRequest(loginData));
+    setUsername("");
+    setPassword("");
+    setRole("");
+  };
+
   return (
     <div>
       <SignUpNav />
       <div className="Screen-page">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div class="mb-3">
             <label class="form-label">username</label>
             <input
