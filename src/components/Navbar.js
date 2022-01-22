@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginNav = () => {
+const Navbar = () => {
   return (
     <div>
       <nav class="navbar navbar-dark bg-primary">
@@ -27,6 +27,9 @@ const LoginNav = () => {
               <a class="nav-link" href="#">
                 DashBoard
               </a>
+              <a class="nav-link" href="#">
+                LogIn
+              </a>
             </div>
           </div>
         </div>
@@ -35,4 +38,4 @@ const LoginNav = () => {
   );
 };
 
-export default LoginNav;
+export default Navbar;

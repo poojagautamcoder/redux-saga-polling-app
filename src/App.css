@@ -1,5 +1,8 @@
-.login-page{
+.Screen-page{
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 30px;
+}
+.signup-btn{
+  margin-top: 20px;
 }
