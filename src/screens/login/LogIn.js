@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { LoginRequest } from "../../action/index";
+import { LoginRequest } from "../../redux/action/index";
 import LoginNav from "./LoginNav";
 const LogIn = () => {
   const [username, setUsername] = useState("");

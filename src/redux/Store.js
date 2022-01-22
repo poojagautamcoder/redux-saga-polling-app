@@ -1,7 +1,7 @@
-import rootReducer from "../src/reducers/rootReducer"
+import rootReducer from "../redux/reducers/rootReducer";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import rootSaga from "./saga/RootSaga";
+import rootSaga from "../redux/saga/RootSaga";
 // we need initial state otherwise , store will freak out
 const initialstate = {};
 
