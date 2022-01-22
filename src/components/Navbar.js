@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignUpNav = () => {
+const Navbar = () => {
   return (
     <div>
       <nav class="navbar navbar-dark bg-primary">
@@ -22,10 +22,13 @@ const SignUpNav = () => {
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">
-                LogIn
+                SignUp
               </a>
               <a class="nav-link" href="#">
                 DashBoard
+              </a>
+              <a class="nav-link" href="#">
+                LogIn
               </a>
             </div>
           </div>
@@ -35,4 +38,4 @@ const SignUpNav = () => {
   );
 };
 
-export default SignUpNav;
+export default Navbar;
