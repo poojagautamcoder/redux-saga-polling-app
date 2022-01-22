@@ -23,7 +23,7 @@ const LogIn = () => {
   return (
     <div>
       <LoginNav />
-      <div className="login-page">
+      <div className="Screen-page">
         <h3>Log In</h3>
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
@@ -53,7 +53,7 @@ const LogIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary ">
             Sign In
           </button>
         </form>
