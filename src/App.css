@@ -13,13 +13,11 @@
 .edit{
   margin-left: 15px;
 }
-.poll-details{
+.poll-details {
   padding: 10px;
-  margin-top: 30px ;
-  display: flex;
-  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
 }
-.polldata{
-  max-width: 90%;
-  height: 100%;
+.poll-option{
+margin-left: 5px;
 }

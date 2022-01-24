@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<LogIn />}></Route>
-          <Route exact path="/DashBoard" element={<DashBoard />}></Route>
-          <Route exact path="/SignUp" element={<SignUp />}></Route>
-          <Route exact path="/UserList" element={<UserList />}></Route>
+          <Route exact path="/dashBoard" element={<DashBoard />}></Route>
+          <Route exact path="/signUp" element={<SignUp />}></Route>
+          <Route exact path="/userList" element={<UserList />}></Route>
         </Routes>
       </Router>
     </React.Fragment>
