@@ -6,3 +6,20 @@
 .signup-btn{
   margin-top: 20px;
 }
+.pollsbtn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.edit{
+  margin-left: 15px;
+}
+.poll-details{
+  padding: 10px;
+  margin-top: 30px ;
+  display: flex;
+  justify-content: center;
+}
+.polldata{
+  max-width: 90%;
+  height: 100%;
+}
