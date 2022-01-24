@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MyOwnComponents from "../../components/MyOwnComponents";
 import Navbar from "../../components/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { ListRequest } from "../../redux/action/index";
 
 const UserList = () => {
+  const { data } = useSelector((state) => state.ListReducer);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(ListRequest());
+  }, []);
+  console.log(data, "asdfghjkl");
   return (
     <div>
       <Navbar />
@@ -16,7 +25,17 @@ const UserList = () => {
               <th>Role</th>
             </tr>
           </thead>
-          <MyOwnComponents/>
+          <tbody>
+            {data &&
+              data.length &&
+              data?.map((curElem, index) => {
+                return (
+                  <tr key={curElem._id}>
+                    <MyOwnComponents data={curElem} />
+                  </tr>
+                );
+              })}
+          </tbody>
         </table>
       </div>
     </div>

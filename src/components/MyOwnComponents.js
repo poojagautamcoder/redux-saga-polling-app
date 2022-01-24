@@ -1,15 +1,12 @@
 import React from "react";
-const MyOwnComponents = ({curElem}) => {
+const MyOwnComponents = ({ data }) => {
+  console.log(data, "abcd");
   return (
-    <div>
-      <tbody>
-        <tr>
-          <td className="align-top"> {curElem?.username}</td>
-          <td className="align-top">{curElem?.password}</td>
-          <td className="align-top">{curElem?.role}</td>
-        </tr>
-      </tbody>
-    </div>
+    <>
+      <td className="align-top"> {data?.username}</td>
+      <td className="align-top">{data?.password}</td>
+      <td className="align-top">{data?.role}</td>
+    </>
   );
 };
 

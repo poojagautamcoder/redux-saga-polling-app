@@ -22,7 +22,7 @@ const ListReducer = (state = initialstate, action) => {
         isLoading: false,
         isSuccess: true,
         isError: false,
-        response: action.payload.response,
+        data: action.payload.response,
       };
 
     case constant.List_Error:
