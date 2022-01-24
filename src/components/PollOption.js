@@ -1,5 +1,5 @@
 import React from "react";
-const DashOption = () => {
+const PollOption = () => {
   return (
     <div>
       <div class="form-check">
@@ -18,4 +18,4 @@ const DashOption = () => {
     </div>
   );
 };
-export default DashOption;
+export default PollOption;
