@@ -1,8 +1,8 @@
 import React from "react";
+import MyOwnComponents from "../../components/MyOwnComponents";
 import Navbar from "../../components/Navbar";
-import List from "../../components/Navbar";
 
-const UserList = (props) => {
+const UserList = () => {
   return (
     <div>
       <Navbar />
@@ -16,13 +16,7 @@ const UserList = (props) => {
               <th>Role</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className="align-top"> {props.username}</td>
-              <td className="align-top">{props.password}</td>
-              <td className="align-top">{props.role}</td>
-            </tr>
-          </tbody>
+          <MyOwnComponents/>
         </table>
       </div>
     </div>

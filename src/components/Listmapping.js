@@ -11,18 +11,13 @@ const Listmapping = () => {
   }, []);
   return (
     <div>
-      {data &&
-        data.length &&
-        data?.map((curElem, index) => {
-          return (
-            <UserList
-              key={curElem.id}
-              username={curElem.username}
-              password={curElem.password}
-              role={curElem.role}
-            />
-          );
-        })}
+      {data?.map((curElem, index) => {
+        return (
+          <div key={curElem.id}>
+            <MyOwnComponent data={curElem} />
+          </div>
+        );
+      })}
     </div>
   );
 };
