@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import checkAuth from "../redux/checkAuth";
 const Navbar = () => {
   return (
     <div>
@@ -22,19 +22,25 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <Link className="nav-link" to="/">
-                LogIn
-              </Link>
-              <Link className="nav-link" to="/dashBoard">
-                DashBoard
-              </Link>
-
-              <Link className="nav-link" to="/signUp">
-                SignUp
-              </Link>
-              <Link className="nav-link" to="/adduser">
-                Add User
-              </Link>
+              {<checkAuth/> ? (
+                <>
+                  <Link className="nav-link" to="/dashBoard">
+                    DashBoard
+                  </Link>
+                  <Link className="nav-link" to="/adduser">
+                    Add User
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link className="nav-link" to="/">
+                    LogIn
+                  </Link>
+                  <Link className="nav-link" to="/signUp">
+                    SignUp
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
