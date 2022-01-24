@@ -6,9 +6,7 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
-  const state = useSelector((state) => {
-    return state.data;
-  });
+  const data = useSelector((state) => state.SignupReducer);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
