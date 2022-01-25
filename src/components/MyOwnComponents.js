@@ -1,6 +1,5 @@
 import React from "react";
 const MyOwnComponents = ({ data }) => {
-  console.log(data, "abcd");
   return (
     <>
       <td className="align-top"> {data?.username}</td>

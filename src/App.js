@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SignUp from "./screens/signUp/SignUp";
 import UserList from "./screens/list/UserList";
 import Navbar from "./components/Navbar";
-import DashPoll from "./components/DashPoll";
 function App() {
   return (
     <React.Fragment>
@@ -18,8 +17,7 @@ function App() {
           <Route exact path="/dash-board" element={<DashBoard />}></Route>
           <Route exact path="/sign-up" element={<SignUp />}></Route>
           <Route exact path="/user-list" element={<UserList />}></Route>
-          <Route exact path="/dash-poll" element={<DashPoll />}></Route>
-        </Routes>
+           </Routes>
       </Router>
     </React.Fragment>
   );

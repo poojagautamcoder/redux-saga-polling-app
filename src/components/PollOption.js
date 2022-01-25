@@ -1,19 +1,11 @@
 import React from "react";
-const PollOption = () => {
+const PollOption = ({ options }) => {
+  console.log(options, "optiondata");
   return (
     <div>
       <div class="form-check">
         <input type="radio" />
-        <label className="poll-option">options</label>
-        <div className="pollsbtn">
-          <button type="button" className="btn btn-danger">
-            Delete
-          </button>
-
-          <button type="button" className="btn btn-info edit">
-            Edit
-          </button>
-        </div>
+        <label className="poll-option">{options?.option}</label>
       </div>
     </div>
   );
