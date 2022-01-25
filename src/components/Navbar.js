@@ -24,10 +24,10 @@ const Navbar = () => {
             <div class="navbar-nav">
               {<checkAuth/> ? (
                 <>
-                  <Link className="nav-link" to="/dashBoard">
+                  <Link className="nav-link" to="/dash-board">
                     DashBoard
                   </Link>
-                  <Link className="nav-link" to="/adduser">
+                  <Link className="nav-link" to="/add-user">
                     Add User
                   </Link>
                 </>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   <Link className="nav-link" to="/">
                     LogIn
                   </Link>
-                  <Link className="nav-link" to="/signUp">
+                  <Link className="nav-link" to="/sign-up">
                     SignUp
                   </Link>
                 </>

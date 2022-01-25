@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import MyOwnComponents from "../../components/MyOwnComponents";
-import Navbar from "../../components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { ListRequest } from "../../redux/action/index";
 
@@ -14,7 +13,7 @@ const UserList = () => {
   console.log(data, "asdfghjkl");
   return (
     <div>
-      <Navbar />
+    
       <div className="table-responsive  ">
         <h3>Userlist</h3>
         <table className="table align-middle">
