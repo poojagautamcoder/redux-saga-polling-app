@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LoginRequest } from "../../redux/action/index";
-import LoginNav from "../../components/Navbar";
+
 const LogIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,6 @@ const LogIn = () => {
   };
   return (
     <div>
-      <LoginNav />
       <div className="Screen-page">
         <h3>Log In</h3>
         <form onSubmit={handleSubmit}>

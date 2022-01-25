@@ -12,8 +12,8 @@ export function* logIn(action) {
     const response = yield call(axios.get, url);
     if (response) {
       localStorage.setItem("token", response.data.token);
-      yield put(LoginSuccess({ response: response }));
-      window.location.replace("/DashBoard");
+      yield put(LoginSuccess({ response: response.data.token }));
+      window.location.replace("/dash-board");
     } else {
       yield put(LoginError({ error: "Invalid details" }));
     }
