@@ -13,7 +13,6 @@ const UserList = () => {
   console.log(data, "asdfghjkl");
   return (
     <div>
-    
       <div className="table-responsive  ">
         <h3>Userlist</h3>
         <table className="table align-middle">

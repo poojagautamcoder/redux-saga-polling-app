@@ -2,7 +2,7 @@ import { put, call } from "@redux-saga/core/effects";
 import { DashboardSuccess, DashboardError } from "../action/index";
 import axios from "axios";
 
-export function* allPolls(action) {
+export function* allPolls() {
   const url = `https://secure-refuge-14993.herokuapp.com/list_polls`;
   const apiCall = () => {
     return axios.get(url);

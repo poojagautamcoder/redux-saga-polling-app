@@ -22,22 +22,22 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              {<checkAuth/> ? (
-                <>
-                  <Link className="nav-link" to="/dash-board">
-                    DashBoard
-                  </Link>
-                  <Link className="nav-link" to="/add-user">
-                    Add User
-                  </Link>
-                </>
-              ) : (
+              {<checkAuth /> ? (
                 <>
                   <Link className="nav-link" to="/">
                     LogIn
                   </Link>
                   <Link className="nav-link" to="/sign-up">
                     SignUp
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link className="nav-link" to="/dash-board">
+                    DashBoard
+                  </Link>
+                  <Link className="nav-link" to="/add-user">
+                    Add User
                   </Link>
                 </>
               )}

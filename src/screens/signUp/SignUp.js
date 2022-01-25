@@ -25,6 +25,7 @@ const SignUp = () => {
   return (
     <div>
       <div className="Screen-page">
+        <h3>Sign Up Here...</h3>
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
             <label class="form-label">username</label>
