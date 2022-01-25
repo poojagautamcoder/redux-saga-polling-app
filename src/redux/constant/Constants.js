@@ -9,3 +9,7 @@ export const Signup_Error = "Signup_Error";
 export const List_Request = "List_Request";
 export const List_Success = "List_Success";
 export const List_Error = "List_Error";
+
+export const Dashboard_Request = "Dashboard_Request";
+export const Dashboard_Success = "Dashboard_Success";
+export const Dashboard_Error = "Dashboard_Error";
