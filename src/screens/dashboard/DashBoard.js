@@ -3,12 +3,15 @@ import DashPoll from "../../components/DashPoll";
 import PollOption from "../../components/PollOption";
 import { useDispatch, useSelector } from "react-redux";
 import { DashboardRequest } from "../../redux/action/index";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import checkAuth from "../../redux/checkAuth";
 const DashBoard = () => {
   const { data } = useSelector((state) => state.DashboardReducer);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    !checkAuth() && navigate("/");
     dispatch(DashboardRequest());
   }, []);
 
@@ -25,9 +28,11 @@ const DashBoard = () => {
                   <button type="button" className="btn btn-danger">
                     Delete
                   </button>
-                  <button type="button" className="btn btn-info edit">
-                    Edit
-                  </button>
+                  <Link to={`/edit-poll/${curElem?._id}`}>
+                    <button type="button" className="btn btn-info edit">
+                      Edit
+                    </button>
+                  </Link>
                 </div>
               </div>
             );
