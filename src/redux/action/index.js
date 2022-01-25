@@ -16,3 +16,7 @@ export const ListError = createAction(constant.List_Error);
 export const DashboardRequest = createAction(constant.Dashboard_Request);
 export const DashboardSuccess = createAction(constant.Dashboard_Success);
 export const DashboardError = createAction(constant.Dashboard_Error);
+
+export const EditpollRequest = createAction(constant.Editpoll_Request);
+export const EditpollSuccess = createAction(constant.Editpoll_Success);
+export const EditpollError = createAction(constant.Editpoll_Error);

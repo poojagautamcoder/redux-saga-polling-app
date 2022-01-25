@@ -13,3 +13,7 @@ export const List_Error = "List_Error";
 export const Dashboard_Request = "Dashboard_Request";
 export const Dashboard_Success = "Dashboard_Success";
 export const Dashboard_Error = "Dashboard_Error";
+
+export const Editpoll_Request = "Editpoll_Request";
+export const Editpoll_Success = "Editpoll_Success";
+export const Editpoll_Error = "Editpoll_Error";
