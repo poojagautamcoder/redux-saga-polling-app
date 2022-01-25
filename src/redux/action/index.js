@@ -12,3 +12,7 @@ export const SignupError = createAction(constant.Signup_Error);
 export const ListRequest = createAction(constant.List_Request);
 export const ListSuccess = createAction(constant.List_Success);
 export const ListError = createAction(constant.List_Error);
+
+export const DashboardRequest = createAction(constant.Dashboard_Request);
+export const DashboardSuccess = createAction(constant.Dashboard_Success);
+export const DashboardError = createAction(constant.Dashboard_Error);
