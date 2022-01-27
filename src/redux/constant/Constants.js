@@ -29,3 +29,8 @@ export const Addpoll_Error = "Addpoll_Error";
 export const Delpolopt_Request = "Delpolopt_Request";
 export const Delpolopt_Success = "Delpolopt_Success";
 export const Delpolopt_Error = "Delpolopt_Error";
+
+
+export const Addoption_Request = "Addoption_Request";
+export const Addoption_Success = "Addoption_Success";
+export const Addoption_Error = "Addoption_Error";

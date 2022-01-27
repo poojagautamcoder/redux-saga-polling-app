@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { EditpollRequest } from "../redux/action/index";
+import { EditpollRequest, AddoptionRequest } from "../redux/action/index";
 import { useParams } from "react-router-dom";
 import EditOption from "../components/EditOption";
 const EditPoll = () => {
@@ -12,6 +12,11 @@ const EditPoll = () => {
   useEffect(() => {
     dispatch(EditpollRequest({ id }));
   }, []);
+
+  const addopt = (id, optionText) => {
+    dispatch(AddoptionRequest({ id: id, optionText: optionText }));
+  };
+
 
   return (
     <div className="Screen-page  dashboard">
@@ -33,7 +38,7 @@ const EditPoll = () => {
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-default"
         />
-        <button type="button" className="btn btn-outline-dark">
+        <button type="button" className="btn btn-outline-dark"  onClick={() => addopt(id, options?.option)}>
           Add
         </button>
       </div>
