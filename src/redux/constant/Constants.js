@@ -22,6 +22,6 @@ export const Delpolls_Request = "Delpolls_Request";
 export const Delpolls_Success = "Delpolls_Success";
 export const Delpolls_Error = "Delpolls_Error";
 
-export const Adduser_Request = "Adduser_Request";
-export const Adduser_Success = "Adduser_Success";
-export const Adduser_Error = "Adduser_Error";
+export const Addpoll_Request = "Addpoll_Request";
+export const Addpoll_Success = "Addpoll_Success";
+export const Addpoll_Error = "Addpoll_Error";

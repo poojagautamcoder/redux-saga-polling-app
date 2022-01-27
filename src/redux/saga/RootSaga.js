@@ -14,7 +14,7 @@ function* PollingApp() {
   yield takeLatest(constant.Dashboard_Request, allPolls);
   yield takeLatest(constant.Editpoll_Request, editPoll);
   yield takeLatest(constant.Delpolls_Request,deletePoll);
-  yield takeLatest(constant.Adduser_Request,AddPoll);
+  yield takeLatest(constant.Addpoll_Request,AddPoll);
 }
 
 export default function* rootSaga() {
