@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { EditpollRequest } from "../redux/action/index";
+import { useParams } from "react-router-dom";
+import EditOption from "../components/EditOption";
 const EditPoll = () => {
+  const { id } = useParams();
+  const { data } = useSelector((state) => state.EditpollReducer);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(EditpollRequest({ id }));
+  }, []);
+
   return (
-    <div>
-      <h3>Title</h3>
-      <div class="form-check">
-        <input type="radio" />
-        <label className="poll-option">option</label>
+    <div className="Screen-page  dashboard">
+      <h3>{data?.title}</h3>
+      {data.options?.map((option, index) => {
+        return (
+          <div key={index}>
+            <EditOption options={option} />
+          </div>
+        );
+      })}
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">
+          Option
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+        <button type="button" className="btn btn-outline-dark">
+          Add
+        </button>
       </div>
     </div>
   );

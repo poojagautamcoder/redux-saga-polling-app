@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import DashPoll from "../../components/DashPoll";
-import PollOption from "../../components/PollOption";
 import { useDispatch, useSelector } from "react-redux";
 import { DashboardRequest } from "../../redux/action/index";
 import { useNavigate, Link } from "react-router-dom";
