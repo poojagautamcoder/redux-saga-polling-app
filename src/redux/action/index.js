@@ -24,3 +24,7 @@ export const EditpollError = createAction(constant.Editpoll_Error);
 export const DelpollsRequest = createAction(constant.Delpolls_Request);
 export const DelpollsSuccess = createAction(constant.Delpolls_Success);
 export const DelpollsError = createAction(constant.Delpolls_Error);
+
+export const AddupollRequest = createAction(constant.Addpoll_Request);
+export const AddpollSuccess = createAction(constant.Addpoll_Success);
+export const AddpollError = createAction(constant.Addpoll_Error);
