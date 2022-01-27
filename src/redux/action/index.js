@@ -20,3 +20,7 @@ export const DashboardError = createAction(constant.Dashboard_Error);
 export const EditpollRequest = createAction(constant.Editpoll_Request);
 export const EditpollSuccess = createAction(constant.Editpoll_Success);
 export const EditpollError = createAction(constant.Editpoll_Error);
+
+export const DelpollsRequest = createAction(constant.Delpolls_Request);
+export const DelpollsSuccess = createAction(constant.Delpolls_Success);
+export const DelpollsError = createAction(constant.Delpolls_Error);

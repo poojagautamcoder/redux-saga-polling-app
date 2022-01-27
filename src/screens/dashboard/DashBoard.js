@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DashPoll from "../../components/DashPoll";
 import { useDispatch, useSelector } from "react-redux";
 import { DashboardRequest } from "../../redux/action/index";
@@ -8,6 +8,22 @@ const DashBoard = () => {
   const { data } = useSelector((state) => state.DashboardReducer);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    if (data) {
+      setList(data);
+    }
+  }, [data]);
+
+  const delPoll = (id) => {
+    setList(list.filter((item) => item.id !== id));
+    dispatch(
+      DelpollsRequest({
+        id: id,
+      })
+    );
+  };
 
   useEffect(() => {
     !checkAuth() && navigate("/");
@@ -17,17 +33,21 @@ const DashBoard = () => {
   return (
     <div className="poll-details Screen-page">
       <div className="dashboard">
-        {data &&
-          data.length &&
-          data?.map((curElem, index) => {
+        {list &&
+          list.length &&
+          list?.map((curElem, index) => {
             return (
               <div key={curElem._id}>
-                <DashPoll data={curElem} />
+                <DashPoll list={curElem} />
                 <div className="pollsbtn">
-                  <button type="button" className="btn btn-danger">
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => delPoll(list?._id)}
+                  >
                     Delete
                   </button>
-                  <Link to={`/edit-poll/${curElem?._id}`}>
+                  <Link to={`/edit-poll/${list?._id}`}>
                     <button type="button" className="btn btn-info edit">
                       Edit
                     </button>
@@ -47,5 +67,4 @@ const DashBoard = () => {
     </div>
   );
 };
-
 export default DashBoard;
