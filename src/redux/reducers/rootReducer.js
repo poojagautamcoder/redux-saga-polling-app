@@ -5,6 +5,7 @@ import ListReducer from "../reducers/ListReducer";
 import DashboardReducer from "../reducers/DashboradReducer";
 import EditpollReducer from "./EditpollReducer";
 import DelpollsReducer from "./DelpollsReducer";
+import AdduserReducer from "./AdduserReducer";
 const rootReducer = combineReducers({
   LoginReducer,
   SignupReducer,
@@ -12,5 +13,6 @@ const rootReducer = combineReducers({
   DashboardReducer,
   EditpollReducer,
   DelpollsReducer,
+  AdduserReducer,
 });
 export default rootReducer;
