@@ -10,7 +10,6 @@ const Listmapping = () => {
   useEffect(() => {
     dispatch(ListRequest());
   }, []);
-  console.log(data,'asdfghjkl')
   return (
     <div>
       {data?.map((curElem, index) => {

@@ -5,7 +5,6 @@ const initialstate = {
   isError: false,
 };
 const DelpollsReducer = (state = initialstate, action) => {
-  console.log(action, "action");
   switch (action.type) {
     case constant.Delpolls_Request:
       return {

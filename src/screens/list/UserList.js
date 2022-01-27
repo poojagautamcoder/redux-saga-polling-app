@@ -10,7 +10,6 @@ const UserList = () => {
   useEffect(() => {
     dispatch(ListRequest());
   }, []);
-  console.log(data, "asdfghjkl");
   return (
     <div>
       <div className="table-responsive  ">

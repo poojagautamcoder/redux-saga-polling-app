@@ -3,10 +3,9 @@ const initialstate = {
   isLoading: false,
   isSuccess: false,
   isError: false,
-  isAdduser: false,
+  isAddpoll: false,
 };
 const AddpollReducer = (state = initialstate, action) => {
-  console.log(action, "action");
   switch (action.type) {
     case constant.Addpoll_Request:
       return {
@@ -14,7 +13,7 @@ const AddpollReducer = (state = initialstate, action) => {
         isLoading: true,
         isSuccess: false,
         isError: false,
-        isAdduser: false,
+        isAddpoll: false,
       };
     case constant.Addpoll_Success:
       return {
@@ -22,7 +21,7 @@ const AddpollReducer = (state = initialstate, action) => {
         isLoading: false,
         isSuccess: true,
         isError: false,
-        isAdduser: true,
+        isAddpoll: true,
         response: action.payload.response,
       };
     case constant.Addpoll_Error:
@@ -31,7 +30,7 @@ const AddpollReducer = (state = initialstate, action) => {
         isLoading: false,
         isSuccess: false,
         isError: true,
-        isAdduser: false,
+        isAddpoll: false,
         error: action.payload.error,
       };
     default:
