@@ -8,6 +8,7 @@ import SignUp from "./screens/signUp/SignUp";
 import UserList from "./screens/list/UserList";
 import Navbar from "./components/Navbar";
 import EditPoll from "./screens/EditPoll";
+
 function App() {
   return (
     <React.Fragment>
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/dash-board" element={<DashBoard />}></Route>
           <Route exact path="/sign-up" element={<SignUp />}></Route>
           <Route exact path="/user-list" element={<UserList />}></Route>
-          <Route exact path="/edit-poll" element={<EditPoll />}></Route>
+          <Route exact path="/edit-poll/:id" element={<EditPoll />}></Route>
         </Routes>
       </Router>
     </React.Fragment>

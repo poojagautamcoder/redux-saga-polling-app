@@ -3,9 +3,8 @@ import { EditpollSuccess, EditpollError } from "../action/index";
 import axios from "axios";
 
 export function* editPoll(action) {
-  const { id, title } = action.payload;
-  console.log(action.payload, "id");
-  const url = `https://secure-refuge-14993.herokuapp.com/update_poll_title?id=${id}&title=${title}`;
+  const { id } = action.payload;
+  const url = `https://secure-refuge-14993.herokuapp.com/list_poll?id=${id}`;
   const apiCall = () => {
     return axios.get(url);
   };
