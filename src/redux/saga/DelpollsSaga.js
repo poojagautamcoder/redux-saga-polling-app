@@ -8,6 +8,7 @@ import axios from "axios";
 
 export function* deletePoll(action) {
   const { id } = action.payload;
+  console.log(id, "pollid")
   const url = `https://secure-refuge-14993.herokuapp.com/delete_poll?id=${id}`;
   const apiCall = () => {
     return axios.get(url);

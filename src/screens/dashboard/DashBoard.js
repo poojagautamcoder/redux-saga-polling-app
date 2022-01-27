@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DashPoll from "../../components/DashPoll";
 import { useDispatch, useSelector } from "react-redux";
-import { DashboardRequest } from "../../redux/action/index";
+import { DashboardRequest, DelpollsRequest } from "../../redux/action/index";
 import { useNavigate, Link } from "react-router-dom";
 import checkAuth from "../../redux/checkAuth";
 const DashBoard = () => {
@@ -43,11 +43,11 @@ const DashBoard = () => {
                   <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={() => delPoll(list?._id)}
+                    onClick={() => delPoll(curElem?._id)}
                   >
                     Delete
                   </button>
-                  <Link to={`/edit-poll/${list?._id}`}>
+                  <Link to={`/edit-poll/${curElem?._id}`}>
                     <button type="button" className="btn btn-info edit">
                       Edit
                     </button>

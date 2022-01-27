@@ -4,8 +4,8 @@ const initialstate = {
   isSuccess: false,
   isError: false,
 };
-
 const DelpollsReducer = (state = initialstate, action) => {
+  console.log(action, "action");
   switch (action.type) {
     case constant.Delpolls_Request:
       return {
@@ -14,7 +14,6 @@ const DelpollsReducer = (state = initialstate, action) => {
         isSuccess: false,
         isError: false,
       };
-
     case constant.Delpolls_Success:
       return {
         ...state,
@@ -23,7 +22,6 @@ const DelpollsReducer = (state = initialstate, action) => {
         isError: false,
         response: action.payload.response,
       };
-
     case constant.Delpolls_Error:
       return {
         ...state,
@@ -36,5 +34,4 @@ const DelpollsReducer = (state = initialstate, action) => {
       return state;
   }
 };
-
 export default DelpollsReducer;
