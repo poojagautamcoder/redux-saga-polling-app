@@ -28,3 +28,11 @@ export const DelpollsError = createAction(constant.Delpolls_Error);
 export const AddpollRequest = createAction(constant.Addpoll_Request);
 export const AddpollSuccess = createAction(constant.Addpoll_Success);
 export const AddpollError = createAction(constant.Addpoll_Error);
+
+export const DelpoloptRequest = createAction(constant.Delpolopt_Request);
+export const DelpoloptSuccess = createAction(constant.Delpolopt_Success);
+export const DelpoloptError = createAction(constant.Delpolopt_Error);
+
+export const AddoptionRequest = createAction(constant.Addoption_Request);
+export const AddoptionSuccess = createAction(constant.Addoption_Success);
+export const AddoptionError = createAction(constant.Addoption_Error);
