@@ -17,3 +17,7 @@ export const Dashboard_Error = "Dashboard_Error";
 export const Editpoll_Request = "Editpoll_Request";
 export const Editpoll_Success = "Editpoll_Success";
 export const Editpoll_Error = "Editpoll_Error";
+
+export const Delpolls_Request = "Delpolls_Request";
+export const Delpolls_Success = "Delpolls_Success";
+export const Delpolls_Error = "Delpolls_Error";
