@@ -1,6 +1,6 @@
 import React from "react";
 
-const Adduser = () => {
+const Addpoll = () => {
   return (
     <form className="Screen-page ">
       <div class="mb-3">
@@ -53,4 +53,4 @@ const Adduser = () => {
     </form>
   );
 };
-export default Adduser;
+export default Addpoll;

@@ -8,7 +8,7 @@ import SignUp from "./screens/signUp/SignUp";
 import UserList from "./screens/list/UserList";
 import Navbar from "./components/Navbar";
 import EditPoll from "./screens/EditPoll";
-import Adduser from "./screens/Adduser";
+import Addpoll from "./screens/Addpoll";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/sign-up" element={<SignUp />}></Route>
           <Route exact path="/user-list" element={<UserList />}></Route>
           <Route exact path="/edit-poll/:id" element={<EditPoll />}></Route>
-          <Route exact path="/add-user" element={<Adduser />}></Route>
+          <Route exact path="/add-poll" element={<Addpoll/>}></Route>
         </Routes>
       </Router>
     </React.Fragment>
