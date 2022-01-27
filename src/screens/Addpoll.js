@@ -18,7 +18,7 @@ const Addpoll = () => {
   const addpoll = (e) => {
     e.preventDefault();
     if (!inputdata) {
-      alert("plz fill the data");
+      alert("please fill the data");
     } else {
       const myNewPollData = {
         title: inputdata,
