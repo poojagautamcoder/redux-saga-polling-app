@@ -30,7 +30,7 @@ const Addpoll = () => {
   };
 
   useEffect(() => {
-    if (!checkAuth()) {
+    if (checkAuth() === "guest") {
       navigate("/");
     }
   }, []);

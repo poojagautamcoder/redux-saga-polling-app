@@ -26,6 +26,9 @@ const DashBoard = () => {
   };
 
   useEffect(() => {
+    if(checkAuth() === "guest"){
+      navigate("/")
+    }
     !checkAuth() && navigate("/");
     dispatch(DashboardRequest());
   }, []);

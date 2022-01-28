@@ -9,14 +9,13 @@ const UserList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (checkAuth() === "guest") {
+      navigate("/");
+    }
     dispatch(ListRequest());
   }, []);
 
-  useEffect(() => {
-    if (!checkAuth()) {
-      navigate("/");
-    }
-  }, []);
+ 
   return (
     <div>
       <div className="table-responsive  ">

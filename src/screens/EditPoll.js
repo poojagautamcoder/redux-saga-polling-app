@@ -11,13 +11,10 @@ const EditPoll = () => {
   const [newOption, setNewOption] = useState("");
 
   useEffect(() => {
-    dispatch(EditpollRequest({ id }));
-  }, []);
-
-  useEffect(() => {
-    if (!checkAuth()) {
+    if (checkAuth() === "guest") {
       navigate("/");
     }
+    dispatch(EditpollRequest({ id }));
   }, []);
 
   const addopt = (e) => {

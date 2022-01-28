@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import checkAuth from "../redux/checkAuth";
 const Pollpage = () => {
   const navigate = useNavigate();
 
@@ -7,6 +8,12 @@ const Pollpage = () => {
     localStorage.clear();
     navigate("/");
   };
+
+  useEffect(() => {
+    if (checkAuth() === "admin") {
+      navigate("/");
+    }
+  }, []);
 
   return (
     <div>
