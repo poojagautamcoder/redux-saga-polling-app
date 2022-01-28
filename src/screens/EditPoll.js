@@ -6,17 +6,26 @@ import EditOption from "../components/EditOption";
 const EditPoll = () => {
   const { id } = useParams();
   const { data } = useSelector((state) => state.EditpollReducer);
-
   const dispatch = useDispatch();
+  const [newOption, setNewOption] = useState("");
 
   useEffect(() => {
     dispatch(EditpollRequest({ id }));
   }, []);
 
-  const addopt = (id, optionText) => {
-    dispatch(AddoptionRequest({ id: id, optionText: optionText }));
+  const addopt = (e) => {
+    e.preventDefault();
+    if (!newOption) {
+      alert("please fill the data");
+    } else {
+      const myNewOption = {
+        id: id,
+        option: newOption,
+      };
+      dispatch(AddoptionRequest(myNewOption));
+      setNewOption(...newOption, "");
+    }
   };
-
 
   return (
     <div className="Screen-page  dashboard">
@@ -32,13 +41,14 @@ const EditPoll = () => {
         <span class="input-group-text" id="inputGroup-sizing-default">
           Option
         </span>
+
         <input
+          onChange={(e) => setNewOption(e.target.value)}
+          value={newOption}
           type="text"
           class="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default"
         />
-        <button type="button" className="btn btn-outline-dark"  onClick={() => addopt(id, options?.option)}>
+        <button type="button" className="btn btn-outline-dark" onClick={addopt}>
           Add
         </button>
       </div>

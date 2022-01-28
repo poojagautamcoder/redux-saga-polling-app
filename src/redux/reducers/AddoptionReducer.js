@@ -5,6 +5,7 @@ const initialstate = {
   isError: false,
 };
 const AddoptionReducer = (state = initialstate, action) => {
+  console.log(action, "addpoll");
   switch (action.type) {
     case constant.Addoption_Request:
       return {

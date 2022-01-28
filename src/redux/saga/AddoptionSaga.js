@@ -7,8 +7,9 @@ import {
 import axios from "axios";
 
 export function* addoption(action) {
-  const { id, optionText } = action.payload;
-  const url = `https://secure-refuge-14993.herokuapp.com/add_new_option?id=${id}option_text=${optionText}`;
+  console.log(action.payload, "action payload");
+  const { id, option } = action.payload;
+  const url = `https://secure-refuge-14993.herokuapp.com/add_new_option?id=${id}&option_text=${option}`;
   const apiCall = () => {
     return axios.get(url);
   };
@@ -22,6 +23,7 @@ export function* addoption(action) {
       yield put(AddoptionError({ error: "Invalid details" }));
     }
   } catch (error) {
+    console.log(error, "error");
     yield put(AddoptionError({ error: error }));
   }
 }
