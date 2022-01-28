@@ -9,7 +9,7 @@ import axios from "axios";
 export function* addoption(action) {
   console.log(action.payload, "action payload");
   const { id, option } = action.payload;
-  const url = `https://secure-refuge-14993.herokuapp.com/add_new_option?id=${id}option_text=${option}`;
+  const url = `https://secure-refuge-14993.herokuapp.com/add_new_option?id=${id}&option_text=${option}`;
   const apiCall = () => {
     return axios.get(url);
   };
