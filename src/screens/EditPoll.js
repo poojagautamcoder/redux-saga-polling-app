@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { EditpollRequest, AddoptionRequest } from "../redux/action/index";
 import { useParams } from "react-router-dom";
 import EditOption from "../components/EditOption";
+import checkAuth from "../redux/checkAuth";
 const EditPoll = () => {
   const { id } = useParams();
   const { data } = useSelector((state) => state.EditpollReducer);
@@ -10,6 +11,9 @@ const EditPoll = () => {
   const [newOption, setNewOption] = useState("");
 
   useEffect(() => {
+    if (checkAuth() === "guest") {
+      navigate("/");
+    }
     dispatch(EditpollRequest({ id }));
   }, []);
 

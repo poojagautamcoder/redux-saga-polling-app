@@ -26,14 +26,17 @@ const DashBoard = () => {
   };
 
   useEffect(() => {
+    if(checkAuth() === "guest"){
+      navigate("/")
+    }
     !checkAuth() && navigate("/");
     dispatch(DashboardRequest());
   }, []);
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   return (
     <div className="poll-details Screen-page">

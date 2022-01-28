@@ -2,14 +2,20 @@ import React, { useEffect } from "react";
 import MyOwnComponents from "../../components/MyOwnComponents";
 import { useDispatch, useSelector } from "react-redux";
 import { ListRequest } from "../../redux/action/index";
+import checkAuth from "../../redux/checkAuth";
 
 const UserList = () => {
   const { data } = useSelector((state) => state.ListReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (checkAuth() === "guest") {
+      navigate("/");
+    }
     dispatch(ListRequest());
   }, []);
+
+ 
   return (
     <div>
       <div className="table-responsive  ">
