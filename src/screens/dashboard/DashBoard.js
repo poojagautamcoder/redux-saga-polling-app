@@ -30,6 +30,11 @@ const DashBoard = () => {
     dispatch(DashboardRequest());
   }, []);
 
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/')
+  }
+
   return (
     <div className="poll-details Screen-page">
       <div className="dashboard">
@@ -58,11 +63,9 @@ const DashBoard = () => {
           })}
       </div>
       <div className="logout-button">
-        <Link className="nav-link" to="/">
-          <button type="button" class="btn btn-success">
-            Logout
-          </button>
-        </Link>
+        <button type="button" class="btn btn-success" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
     </div>
   );

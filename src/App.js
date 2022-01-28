@@ -9,6 +9,7 @@ import UserList from "./screens/list/UserList";
 import Navbar from "./components/Navbar";
 import EditPoll from "./screens/EditPoll";
 import Addpoll from "./screens/Addpoll";
+import Pollpage from "./screens/Pollpage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/user-list" element={<UserList />}></Route>
           <Route exact path="/edit-poll/:id" element={<EditPoll />}></Route>
           <Route exact path="/add-poll" element={<Addpoll/>}></Route>
+          <Route exact path="/poll-page" element={<Pollpage/>}></Route>
         </Routes>
       </Router>
     </React.Fragment>
