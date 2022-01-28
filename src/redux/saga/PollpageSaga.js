@@ -4,7 +4,7 @@ import axios from "axios";
 
 export function* Vote(action) {
   console.log(action.payload, "action payload");
-  //   const { id, option } = action.payload;
+  const { id, option } = action.payload;
   const url = `https://secure-refuge-14993.herokuapp.com/do_vote?id=${id}&option_text=${option}`;
   const apiCall = () => {
     return axios.get(url);
