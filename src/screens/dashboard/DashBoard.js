@@ -32,8 +32,8 @@ const DashBoard = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   return (
     <div className="poll-details Screen-page">

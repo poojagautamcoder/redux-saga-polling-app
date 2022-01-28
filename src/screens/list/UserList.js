@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MyOwnComponents from "../../components/MyOwnComponents";
 import { useDispatch, useSelector } from "react-redux";
 import { ListRequest } from "../../redux/action/index";
+import checkAuth from "../../redux/checkAuth";
 
 const UserList = () => {
   const { data } = useSelector((state) => state.ListReducer);
@@ -9,6 +10,12 @@ const UserList = () => {
 
   useEffect(() => {
     dispatch(ListRequest());
+  }, []);
+
+  useEffect(() => {
+    if (!checkAuth()) {
+      navigate("/");
+    }
   }, []);
   return (
     <div>

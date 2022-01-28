@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddpollRequest } from "../redux/action/index";
-
+import checkAuth from "../redux/checkAuth";
 const Addpoll = () => {
   const [inputdata, setInputData] = useState("");
   const [newOption, setnewOption] = useState({
@@ -28,6 +28,12 @@ const Addpoll = () => {
       setnewOption({ ...newOption, opt1: "", opt2: "", opt3: "", opt4: "" });
     }
   };
+
+  useEffect(() => {
+    if (!checkAuth()) {
+      navigate("/");
+    }
+  }, []);
   return (
     <form className="Screen-page" onSubmit={addpoll}>
       <div class="mb-3">
