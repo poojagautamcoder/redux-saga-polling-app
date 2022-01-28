@@ -36,3 +36,8 @@ export const DelpoloptError = createAction(constant.Delpolopt_Error);
 export const AddoptionRequest = createAction(constant.Addoption_Request);
 export const AddoptionSuccess = createAction(constant.Addoption_Success);
 export const AddoptionError = createAction(constant.Addoption_Error);
+
+export const VoteRequest = createAction(constant.Vote_Request);
+export const VoteSuccess = createAction(constant.Vote_Success);
+export const VoteError = createAction(constant.Vote_Error);
+

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SignupRequest } from "../../redux/action/index";
-
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +21,13 @@ const SignUp = () => {
     setPassword("");
     setRole("");
   };
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (data.isSuccess) {
+      navigate("/");
+    }
+  }, [data.isSuccess]);
+
 
   return (
     <div>

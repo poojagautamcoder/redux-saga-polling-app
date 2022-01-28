@@ -8,6 +8,7 @@ import DelpollsReducer from "./DelpollsReducer";
 import AddpollReducer from "./AddpollReducer";
 import DeloptionReducer from "./DeloptionReducer";
 import AddoptionReducer from "./AddoptionReducer";
+import PollpageReducer from "./PollpageReducer";
 const rootReducer = combineReducers({
   LoginReducer,
   SignupReducer,
@@ -18,5 +19,6 @@ const rootReducer = combineReducers({
   AddpollReducer,
   DeloptionReducer,
   AddoptionReducer,
+  PollpageReducer,
 });
 export default rootReducer;

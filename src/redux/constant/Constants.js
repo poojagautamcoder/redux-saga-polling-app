@@ -30,7 +30,11 @@ export const Delpolopt_Request = "Delpolopt_Request";
 export const Delpolopt_Success = "Delpolopt_Success";
 export const Delpolopt_Error = "Delpolopt_Error";
 
-
 export const Addoption_Request = "Addoption_Request";
 export const Addoption_Success = "Addoption_Success";
 export const Addoption_Error = "Addoption_Error";
+
+export const Vote_Request = "Vote_Request";
+export const Vote_Success = "Vote_Success";
+export const Vote_Error = "Vote_Error";
+
