@@ -3,7 +3,6 @@ const initialstate = {
   isLoading: false,
   isSuccess: false,
   isError: false,
-  isAddpoll: false,
 };
 const PollpageReducer = (state = initialstate, action) => {
   switch (action.type) {
@@ -13,7 +12,6 @@ const PollpageReducer = (state = initialstate, action) => {
         isLoading: true,
         isSuccess: false,
         isError: false,
-        isAddpoll: false,
       };
     case constant.Vote_Success:
       return {
@@ -21,7 +19,6 @@ const PollpageReducer = (state = initialstate, action) => {
         isLoading: false,
         isSuccess: true,
         isError: false,
-        isAddpoll: true,
         response: action.payload.response,
       };
     case constant.Vote_Error:
@@ -30,7 +27,6 @@ const PollpageReducer = (state = initialstate, action) => {
         isLoading: false,
         isSuccess: false,
         isError: true,
-        isAddpoll: false,
         error: action.payload.error,
       };
     default:
