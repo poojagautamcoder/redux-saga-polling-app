@@ -10,7 +10,6 @@ const Addpoll = () => {
     opt3: "",
     opt4: "",
   });
-  // setOptions({...options, opt1: e.target.value})
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state.isAddpoll;
